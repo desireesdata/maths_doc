@@ -182,7 +182,7 @@
 ]
 
 #slide(title: "Un pied dans la mesure")[
-  == Pour l'instant on se contente de parler de mesure
+  == Pour l'instant on se contente de parler de mesure (de comptage)
   - Cela permet de poser une première pierre pour parler de *métriques*;
   - de faire une incursion "silencieuse" dans le monde des probabilités dont on parlera plus tard
   #framed()[
