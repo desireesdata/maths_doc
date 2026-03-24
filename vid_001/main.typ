@@ -355,5 +355,5 @@
   - La mesure de comptage pour "bien" compter et poser un cadre à la normalisation (pour les probas *par exemple*)
   - Les dernières notions vues ne sont pas utiles immédiatement mais :
     - permettent de s'acclimater à certains symboles
-    - posent des jalons (incomplets) pour les probas (ex: tribus) et les stats (ex: fréquences)
+    - posent des jalons (incomplets) pour les probas (ex: tribus), les stats (ex: fréquences) et les types algébriques (disjonction)
 ]
