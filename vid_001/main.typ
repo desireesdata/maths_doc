@@ -356,4 +356,5 @@
   - Les dernières notions vues ne sont pas utiles immédiatement mais :
     - permettent de s'acclimater à certains symboles
     - posent des jalons (incomplets) pour les probas (ex: tribus), les stats (ex: fréquences) et les types algébriques (disjonction)
+    - a faire : parler d'espaces mesurables, structuration des structures ensemblistes pour parler d'espaces métriques.
 ]
