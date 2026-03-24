@@ -42,49 +42,25 @@
 ]
 
 #slide[
-  - Parler brièvement des différents ensembles de nombres (et donc parler des ensembles et des types prédéfinies en informatique)
+  - Parler brièvement des ensembles
   - Clarifier "ensemblistement" : compter des éléments d'un ensemble fini
   - Du monde des ensembles au monde de la mesure
 ]
 
 #title-slide()[
-  == Ensembles de nombres
+  == Ensembles 
 ]
 
-#slide(title: "Ensembles de nombres les plus importants en pratique")[
-  $NN$ (unsigned int en C; int)
-  \
-  $0; 1; 2; 3;...$
-  \
-  $ZZ$ (int)
-  \
-  $-3; -2; -1; 0; 1; 2; 3;...$
-  \
-  $RR$ (float)
-  \
-  $-1;  0;  2,4;  3,5459; 200; ...$
-  \
-  $0, 0,00000...1, 0,00000...2, ... 1, 1,00000...1, 1,00000...2, ...$
-
-  #framed[
-    Attention, ce n'est pas tout à fait exact car un ordinateur ayant une puissance de calcul finie, on n'est pas techniquement dans $RR$ !   
-  ]
-]
-
-#focus-slide()[
-  Côté programmation ?
-]
 
 #slide(title: "Appartient à ...")[
-  == $2 in NN$ 
+  == $"Le livre des merveilles" in "Collection Littérature médiévale"$ 
+
+  == $"L'ami et l'aimé" in "Collection Littérature médiévale"$
   
-  == $-3 in ZZ$
+  == $1234W 114 in 1234W$
   
-  == $4 in ZZ$
-  
-  == $9,6 in RR$
-  
-  == $-2 in.not NN$ 
+  == $1234W 115 in 1234W$
+
 
   #framed[
     L'appartenance concerne une relation élément/ensemble.   
@@ -92,14 +68,27 @@
 ]
 
 #slide(title: "Inclusion")[
-  == $NN subset ZZ subset RR $
+  == $"Collection Littérature Médiévale" subset "Bibliothèque Catalane"$
+  == $"Bibliothèque Catalane" subset "Bibliothèques universitaires"$
+  == $"1234W" subset "Fonds de la Préfecture"$
+  == $"Fonds de la Préfecture" subset "Archives départementales de Seine-et-Marne"$
+
   #framed[
-    Il y a d'autres ensembles de nombres intermédiaires ($QQ$ par exemple) et d'autres plus "grands" ($CC$) mais cela suffit largement pour nous.
+    L'inclusion concerne une relation ensemble/ensemble, l'ensemble incluant étant soit égal ou plus grand que celui inclus.   
   ]
 ]
 
+#slide(title: "Indice")[
+  === On peut utiliser des indices :
+
+  $F_1, F_2, F_3 subset "Archives Départementales de Seine-et-Marne"$\
+  $C_1, C_2_, C_3, ..., C_n subset "Bibliothèque Catalane"$ \
+
+  $a_1, a_2, a_3, ..., a_n in F_1$
+]
+
 #slide(title:"Les ensembles ne sont pas que des nombres")[
-  == Gagner un degré d'abstraction tout en étant plus concret
+  == Gagner un degré d'abstraction avec la notation ensembliste
   $"ce livre" in "cette bibliotheque"$,
   \
   $"ce document d'archives" in "ce service d'archives"$
@@ -152,16 +141,21 @@
   \ (script 02.py)
 ]
 
-#slide()[
+#slide(title: "À mentionner")[
   = Autres concepts importants de la théorie des ensembles
-  - Intersection $inter$
-  - Ensemble vide $emptyset$
+  - *Intersection* $inter$
+  - *Ensemble vide* $emptyset$
   - Applications
   - Définition en compréhension
   - etc.
+]
+
+#slide[
+  == Est utile ici 
+  - Intersection, ensemble vide
 
   #framed()[
-    Mais on ne s'intéresse ici qu'au *comptage*... donc on considère que les ensembles sont *disjonts*, autrement dit que l'intersection des deux ensembles est vide :\
+    Car on ne s'intéresse ici qu'au *comptage*... donc on considère que les ensembles sont *disjonts*, autrement dit que l'intersection des deux ensembles est vide :\
     $A inter B  = emptyset$.\
     Exemple : compter des cotes uniques mais dont certaines sont rattachées à deux collections
   ]
@@ -192,19 +186,19 @@
 
 #title-slide("Comprendre l'additivité finie")
 
-#slide(title:"Boum")[
-  // $ mu(∪_(k=1)^∞ E_k) = sum_(k=1)^∞ mu(E_k) $
-// $ mu(∪_(k=1)^∞ E_k) = sum_(k=1)^∞ mu(E_k) $
-  $
-  mu(union.big_(k=1)^∞ E_k) = sum_(k=1)^∞ mu(E_k)
-  $
+// #slide(title:"Boum")[
+//   // $ mu(∪_(k=1)^∞ E_k) = sum_(k=1)^∞ mu(E_k) $
+// // $ mu(∪_(k=1)^∞ E_k) = sum_(k=1)^∞ mu(E_k) $
+//   $
+//   mu(union.big_(k=1)^∞ E_k) = sum_(k=1)^∞ mu(E_k)
+//   $
 
-  #framed()[
-    Ce genre de formules peuvent paraître impressionnantes (ici elle concerne la sigma-additivité), mais si on prend les choses petit à petit, les choses ne sont pas si difficiles.
-  ]
-]
+//   #framed()[
+//     Ce genre de formules peuvent paraître impressionnantes (ici elle concerne la sigma-additivité), mais si on prend les choses petit à petit, les choses ne sont pas si difficiles.
+//   ]
+// ]
 
-#slide(title:"Pragmatisme : débarassons-nous de l'infini")[
+#slide(title:"Boum (mais c'est simple en fait)")[
   // $ mu(∪_(k=1)^∞ E_k) = sum_(k=1)^∞ mu(E_k) $
 // $ mu(∪_(k=1)^∞ E_k) = sum_(k=1)^∞ mu(E_k) $
   $
@@ -214,7 +208,7 @@
   - On suppose chaque ensemble disjoint !
 
   #framed()[
-    En se débarassant de l'infini, on a une *mesure simplement additive*. Dans le livre _Elements de statistique..._, le chapitre sur la mesure mentionne la notion de mesure additive sans la définir ET sans expliciter qu'il s'agit bien d'un concept mathématique.\ On reviendra (peut-être ?) ultérieurement sur la sigma-additivité.
+    On a une *mesure simplement additive*. Dans le livre _Elements de statistique..._, le chapitre sur la mesure mentionne la notion de mesure additive sans la définir ET sans expliciter qu'il s'agit bien d'un concept mathématique.\ On reviendra (peut-être ?) ultérieurement sur la sigma-additivité.
   ]
 ]
 
@@ -319,8 +313,47 @@
 
 #slide(title: "Pourquoi faire ça ?")[
   == Conclusion
+  - On a adossé le fait de compter à la notion de *mesure de comptage*
+    - "Qu'est-ce que *bien* compter ?" La thérapeutique des ensembles : éviter les recouvrements
+  - La *mesure de comptage* pose des jalons (incomplets) pour les probabilités 
+
+  #framed()[
+    La mesure de comptage pose un cadre : celui du "compter proprement". \
+    Le cas du dé.
+  ]
+]
+
+#slide(title: "Mettons juste un pied dans les probas")[
+  - Les probabilités reposent sur le fait de _bien_ compter les possibilités
+  - Les mesures de probabilités : $mu(X) = 1$
+  - Si on normalise (entre 0 et 1): $mu(E) = (|E|) / (|A union B|)$, tel que $A subset.eq E$ et $B subset.eq E$
+]
+
+#slide(title: "Exemple")[
+    Exemple : $|A| = 3$, $|B| = 3$\
+    $A, B subset.eq E$\
+    $A inter B = emptyset$\
+    Donc :
+    $|A union B| = |A| + |B| = 6$\
+    $E = A union B$
+    #v(0.5em)
+    Normalisation :
+    $mu(X) = (|X|) / (6)$
+    #v(0.5em)
+    Alors :
+    $mu(A) = 3 / 6 = 0.5$\
+    $mu(B) = 3 / 6 = 0.5$\
+
+    #framed()[
+      Notre mesure de comptage permet de compter des éléments dans des ensembles, mais également de calculer les "parts".
+    ]
+]
+
+#slide(title: "Pourquoi faire ça ?")[
+  == Conclusion
   - C'est tout pour la notion de comptage !
+  - La mesure de comptage pour "bien" compter et poser un cadre à la normalisation (pour les probas *par exemple*)
   - Les dernières notions vues ne sont pas utiles immédiatement mais :
     - permettent de s'acclimater à certains symboles
-    - posent des jalons (incomplets) pour la partie axée mesure puis probabilités
+    - posent des jalons (incomplets) pour les probas (ex: tribus) et les stats (ex: fréquences)
 ]
