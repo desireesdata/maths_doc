@@ -177,7 +177,7 @@
 
 #slide(title: "Un pied dans la mesure")[
   == Pour l'instant on se contente de parler de mesure (de comptage)
-  - Cela permet de poser une première pierre pour parler de *métriques*;
+  - Cela permet de poser une première pierre pour parler *d'ensembles mesurables*;
   - de faire une incursion "silencieuse" dans le monde des probabilités dont on parlera plus tard
   #framed()[
     On verra la mesure dans le chapitre suivant, mais il peut être utile de développer son intuition avec un concept au nom barbare...
@@ -223,7 +223,8 @@
 
   == $mu$ comme mesure de comptage. 
   #framed[
-    Le cardinal comme cas particulier de mesure !
+    Le cardinal comme cas particulier de mesure !\
+    Utile pour sortir du dénombrement ensembliste et _commencer_ à s'inscrire dans la _theorie de la mesure_
     \ Vrai ici pour nos ensembles *discrets* (ou dénombrables), c'est-à-dire dans $NN$
   ]
 
@@ -355,6 +356,6 @@
   - La mesure de comptage pour "bien" compter et poser un cadre à la normalisation (pour les probas *par exemple*)
   - Les dernières notions vues ne sont pas utiles immédiatement mais :
     - permettent de s'acclimater à certains symboles
-    - posent des jalons (incomplets) pour les probas (ex: tribus), les stats (ex: fréquences) et les types algébriques (disjonction)
-    - a faire : parler d'espaces mesurables, structuration des structures ensemblistes pour parler d'espaces métriques.
+    - posent des jalons (incomplets) pour les probas (ex: tribus), les stats (ex: fréquences) et les types algébriques (disjonction : envisager l'addition comme un opérateur de "choix")
+    - a faire : parler d'espaces mesurables; structuration des structures ensemblistes pour parler d'espaces métriques; clarifier espace mesurable, espace mesuré, espace métrique.
 ]
